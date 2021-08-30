@@ -1,2 +1,2 @@
-# VideoConference
-VideoConference учебный проект по верстке
+# Video Conference
+Video Conference учебный проект по верстке
