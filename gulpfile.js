@@ -1,9 +1,8 @@
+const projectFolder = require("path").basename(__dirname) //"dist"
+const sourceFolder = "src"
+const fs = require("fs")
 
-let projectFolder = require("path").basename(__dirname) //"dist"
-let sourceFolder = "src"
-let fs = require("fs")
-
-let path = {
+const path = {
   build: {
     html: projectFolder + "/",
     css: projectFolder + "/css/",
@@ -13,41 +12,41 @@ let path = {
   },
   src: {
     html: [sourceFolder + "/*.html", "!" + sourceFolder + "/_*.html"],
-    css: sourceFolder + "/scss/style.scss",
+    css: sourceFolder + "/scss/style.sass",
     img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: sourceFolder + "/fonts/**/*.ttf",
     js: sourceFolder + "/js/script.js",
   },
   watch: {
     html: sourceFolder + "/**/*.html",
-    css: sourceFolder + "/scss/**/*.scss",
+    css: sourceFolder + "/scss/**/*.sass",
     img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     js: sourceFolder + "/js/**/*.js",
   },
   clean: "./" + projectFolder + "/",
 }
 
-let { src, dest } = require("gulp")
-let gulp = require("gulp")
-let browsersync = require("browser-sync").create()
-let fileinclude = require("gulp-file-include")
-let del = require("del")
-let scss = require("gulp-sass")(require("sass"))
-let autoprefixer = require("gulp-autoprefixer")
-let groupMedia = require("gulp-group-css-media-queries")
-let cleanCss = require("gulp-clean-css")
-let rename = require("gulp-rename")
-let uglify = require("gulp-uglify-es").default
-let imageMin = require("gulp-imagemin")
-let webp = require("gulp-webp")
-let webpHtml = require("gulp-webp-html")
-let webpCss = require("gulp-webpcss")
-let svgSprite = require("gulp-svg-sprite")
-let ttf2woff = require("gulp-ttf2woff")
-let ttf2woff2 = require("gulp-ttf2woff2")
-let fonter = require("gulp-fonter")
+const { src, dest } = require("gulp")
+const gulp = require("gulp")
+const browsersync = require("browser-sync").create()
+const fileinclude = require("gulp-file-include")
+const del = require("del")
+const scss = require("gulp-sass")(require("sass"))
+const autoprefixer = require("gulp-autoprefixer")
+const groupMedia = require("gulp-group-css-media-queries")
+const cleanCss = require("gulp-clean-css")
+const rename = require("gulp-rename")
+const uglify = require("gulp-uglify-es").default
+const imageMin = require("gulp-imagemin")
+const webp = require("gulp-webp")
+const webpHtml = require("gulp-webp-html")
+const webpCss = require("gulp-webpcss")
+const svgSprite = require("gulp-svg-sprite")
+const ttf2woff = require("gulp-ttf2woff")
+const ttf2woff2 = require("gulp-ttf2woff2")
+const fonter = require("gulp-fonter")
 
-function browserSync(params) {
+function browserSync() {
   browsersync.init({
     server: {
       baseDir: "./" + projectFolder + "/"
@@ -162,17 +161,17 @@ gulp.task('svgSprite', function () { // запускается отдельно 
     .pipe(dest(path.build.img))
 })
 
-function fontsStyle(params) {
+function fontsStyle() {
   let file_content = fs.readFileSync(sourceFolder + '/scss/fonts.scss');
   if (file_content === '') {
     fs.writeFile(sourceFolder + '/scss/fonts.scss', '', cb);
     return fs.readdir(path.build.fonts, function (err, items) {
       if (items) {
-        let c_fontname;
-        for (var i = 0; i < items.length; i++) {
+        let c_fontname ='';
+        for (let i = 0; i < items.length; i++) {
           let fontname = items[i].split('.');
           fontname = fontname[0];
-          if (c_fontname != fontname) {
+          if (c_fontname !== fontname) {
             fs.appendFile(sourceFolder + '/scss/fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
           }
           c_fontname = fontname;
@@ -184,14 +183,14 @@ function fontsStyle(params) {
 
 function cb() { }
 
-function watchFiles(params) {
+function watchFiles() {
   gulp.watch([path.watch.html], html)
   gulp.watch([path.watch.css], css)
   gulp.watch([path.watch.js], js)
   gulp.watch([path.watch.img], images)
 }
 
-function clean(params) {
+function clean() {
   return del(path.clean)
 }
 

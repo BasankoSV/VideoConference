@@ -1,0 +1,354 @@
+@mixin font($font_name, $file_name, $weight, $style)
+    @font-face
+        font-family: $font_name
+        font-display: swap
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2")
+        font-weight: #{$weight}
+        font-style: #{$style}
+
+@import "fonts"
+*
+    box-sizing: border-box
+
+$main-color: #18216D
+body
+    //width: 1600px
+    font-family: 'Inter', sans-serif
+
+.nav-bar
+    margin: 0 auto
+    margin-top: 25px
+    width: 1400px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .menu-logo
+        width: 114px
+        flex-grow: 1
+    %menu-text
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 20px
+        color: $main-color
+        text-decoration: none
+    .menu-link
+        width: 507px
+        margin-left: 25px
+        display: flex
+        justify-content: flex-start
+        align-items: center
+        flex-grow: 3
+        .link
+            padding-right: 58px
+            @extend %menu-text
+    .menu-btn
+        width: 239px
+        padding-left: 172px
+        flex-grow: 2
+        .link
+            padding-right: 40px
+            @extend %menu-text
+        .btn-download
+            width: 136px
+            height: 52px
+            font-family: 'Inter', sans-serif
+            font-style: normal
+            font-weight: 500
+            font-size: 17px
+            line-height: 20px
+            color: #FFFFFF
+            background: #18216D
+            border-radius: 6px
+            cursor: pointer
+.container
+    margin: 0 auto
+    width: 1140px
+    position: relative
+.promo
+    .start
+        margin-left: -15px
+        margin-top: 96px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-start
+        .title
+            font-style: normal
+            font-weight: 600
+            font-size: 48px
+            line-height: 60px
+            color: $main-color
+        .sub-title
+            min-width: 507px
+            margin-top: -33px
+            font-style: normal
+            font-weight: normal
+            font-size: 17px
+            line-height: 28px
+            color: $main-color
+        .btn-start
+            margin-top: 34px
+            width: 180px
+            height: 66px
+            font-family: 'Inter', sans-serif
+            font-style: normal
+            font-weight: 500
+            font-size: 17px
+            line-height: 21px
+            color: $main-color
+            background: #00ECD0
+            border: none
+            border-radius: 6px
+            cursor: pointer
+    .img-people
+        position: absolute
+        left: 386px
+        top: -49px
+    .uses
+        margin-left: -15px
+        margin-top: 253px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: flex-start
+        .collaborate
+            font-style: normal
+            font-weight: 600
+            font-size: 36px
+            line-height: 50px
+            color: $main-color
+            flex-grow: 4
+        .downloads
+            flex-grow: 1
+            flex-basis: 115px
+        .rating
+            flex-grow: 1
+            text-align: center
+            flex-basis: 130px
+        .company
+            margin-top: 50px
+            width: 1140px
+            padding-left: 30px
+            display: flex
+            justify-content: space-between
+    .features
+        margin-top: 125px
+        .title
+            font-style: normal
+            font-weight: 600
+            font-size: 48px
+            line-height: 64px
+            letter-spacing: -1px
+            text-transform: capitalize
+            color: $main-color
+            text-align: center
+        .sub-title
+            margin-top: 12px
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 30px
+            text-align: center
+            color: $main-color
+        .wrapper
+            margin-top: 48px
+            margin-left: -12px
+            padding-bottom: 130px
+            height: 275px
+            display: flex
+            justify-content: space-between
+            .rating, .reliability, .secure
+                //flex-basis: 340px
+                //flex-shrink: 0
+                flex: 0 0 340px
+            img
+                display: block
+            .title
+                margin-top: 28px
+                font-style: normal
+                font-weight: 600
+                font-size: 24px
+                line-height: 29px
+                color: $main-color
+                text-align: left
+            .description
+                margin-top: 14px
+                width: 320px
+                font-style: normal
+                font-weight: normal
+                font-size: 16px
+                line-height: 26px
+                color: $main-color
+                opacity: 0.6
+            a
+                display: block
+                margin-top: 30px
+                font-style: normal
+                font-weight: 500
+                font-size: 20px
+                line-height: 24px
+                color: $main-color
+                text-decoration: none
+    .integrate
+        position: relative
+        margin: 0 -230px
+        margin-top: 130px
+        height: 593px
+        background: rgba(0, 95, 236, 0.05)
+        .wrapper
+            padding-top: 143px
+            padding-left: 215px
+            display: flex
+            flex-direction: column
+            //align-items: flex-start
+        .title
+            width: 471px
+            font-style: normal
+            font-weight: 600
+            font-size: 36px
+            line-height: 48px
+            color: $main-color
+        .description
+            margin-top: 15px
+            width: 487px
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 26px
+            color: $main-color
+            opacity: 0.8
+        .btn-start
+            margin-top: 40px
+            width: 160px
+            height: 52px
+            background: #005FEC
+            border-radius: 6px
+            font-family: 'Inter', sans-serif
+            font-style: normal
+            font-weight: 500
+            font-size: 17px
+            line-height: 21px
+            color: #FFFFFF
+            border: none
+            cursor: pointer
+        .img-integrate
+            display: block
+            position: absolute
+            left: 792px
+            top: 78px
+    .communication
+        margin-top: 130px
+        //height: 720px
+        .wrapper
+            margin-left: 585px
+            min-width: 500px
+            display: flex
+            flex-direction: column
+        .img-group-meeting
+            position: relative
+            .img-grid
+                position: absolute
+                top: -80px
+                left: -82px
+            .img-meeting
+                position: absolute
+                top: -445px
+                left: -11px
+            .img-weekly
+                position: absolute
+                top: -99px
+                left: 282px
+        .title
+            font-style: normal
+            font-weight: 600
+            font-size: 36px
+            line-height: 48px
+            color: $main-color
+        .description
+            margin-top: 16px
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 30px
+            color: $main-color
+        .list
+            margin-top: 27px
+            margin-left: -38px
+            list-style-type: none
+            li
+                padding-bottom: 20px
+            span
+                margin-left: 10px
+                font-family: 'Inter', sans-serif
+                font-style: normal
+                font-weight: 500
+                font-size: 18px
+                line-height: 18px
+                color: $main-color
+        .btn-start
+            margin-top: 14px
+            width: 164px
+            height: 54px
+            background: #005FEC
+            border-radius: 6px
+            border: none
+            font-family: 'Inter', sans-serif
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 26px
+            color: #FFFFFF
+            cursor: pointer
+    .pricing-plan
+        margin-top: 196px
+        .title
+            font-style: normal
+            font-weight: 600
+            font-size: 48px
+            line-height: 64px
+            text-align: center
+            letter-spacing: -1px
+            text-transform: capitalize
+            color: $main-color
+        .sub-title
+            margin-top: 20px
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 30px
+            text-align: center
+            color: $main-color
+        .plan-switcher
+            margin: 40px auto 0 auto
+            display: flex
+            justify-content: space-around
+            align-items: center
+            //margin-top: 40px
+            width: 272px
+            height: 60px
+            background: rgba(0, 95, 236, 0.1) //opacity: 0.1
+            border-radius: 6px
+            .btn-annually
+                margin-left: 5px
+                width: 135px
+                height: 48px
+                background: #FFFFFF
+                border-radius: 6px
+                border: none
+                font-style: normal
+                font-weight: 500
+                font-size: 17px
+                line-height: 17px
+                color: #005FEC
+                cursor: pointer
+            .btn-monthly
+                width: 135px
+                height: 48px
+                font-style: normal
+                font-weight: 500
+                font-size: 17px
+                line-height: 17px
+                color: $main-color
+                border: none
+                cursor: pointer
