@@ -545,3 +545,110 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+
+.promo .pricing-plan .wrapper {
+  margin-top: 80px;
+  margin-left: -14px;
+  width: 1155px;
+  height: 620px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.promo .pricing-plan .wrapper .plan-item {
+  width: 355px;
+  height: 620px;
+  border: 1px solid rgba(35, 38, 41, 0.2);
+  border-radius: 10px;
+}
+
+.promo .pricing-plan .wrapper .plan-item:hover .plan-box {
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.promo .pricing-plan .wrapper .plan-item:hover .btn-startTrial {
+  background: #005FEC;
+  border-radius: 6px;
+  color: #FFFFFF;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.promo .pricing-plan .wrapper .plan-item .plan-box {
+  height: 160px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.promo .pricing-plan .wrapper .plan-item .plan-box .title {
+  padding: 22px 0 0 41px;
+  text-align: left;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 48px;
+  color: #18216D;
+}
+
+.promo .pricing-plan .wrapper .plan-item .plan-box .price {
+  padding-left: 41px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 48px;
+  color: #18216D;
+}
+
+.promo .pricing-plan .wrapper .plan-item .plan-box .price span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 48px;
+  color: #6D6D6D;
+}
+
+.promo .pricing-plan .wrapper .plan-item .difference {
+  list-style-type: none;
+  padding-top: 20px;
+}
+
+.promo .pricing-plan .wrapper .plan-item .difference .item {
+  background: url("../img/icon_list.png") no-repeat;
+  padding-bottom: 17px;
+  padding-left: 35px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 24px;
+  color: #18216D;
+}
+
+.promo .pricing-plan .wrapper .plan-item .btn-startTrial {
+  margin-left: 41px;
+  margin-top: 6px;
+  width: 181px;
+  height: 52px;
+  border: none;
+  background: rgba(0, 95, 236, 0.1);
+  border-radius: 6px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  color: #18216D;
+}
+
+.webp .promo .pricing-plan .wrapper .plan-item .difference .item { background: url(../img/icon_list.webp) no-repeat; }
