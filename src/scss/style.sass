@@ -324,31 +324,24 @@ body
             display: flex
             justify-content: space-around
             align-items: center
-            //margin-top: 40px
-            width: 272px
+            width: 280px
             height: 60px
             background: rgba(0, 95, 236, 0.1) //opacity: 0.1
             border-radius: 6px
-            .btn-annually
-                margin-left: 5px
-                width: 135px
+            .btn-annually, .btn-monthly
+                width: 132px
                 height: 48px
+                font-style: normal
+                font-weight: 500
+                font-size: 17px
+                line-height: 17px
+                border: none
+                border-radius: 6px
+                cursor: pointer
+                color: $main-color
+            .switch-on
+                //margin: 0 5px
                 background: #FFFFFF
                 border-radius: 6px
-                border: none
-                font-style: normal
-                font-weight: 500
-                font-size: 17px
-                line-height: 17px
                 color: #005FEC
-                cursor: pointer
-            .btn-monthly
-                width: 135px
-                height: 48px
-                font-style: normal
-                font-weight: 500
-                font-size: 17px
-                line-height: 17px
-                color: $main-color
-                border: none
-                cursor: pointer
+                transition: 0.5s

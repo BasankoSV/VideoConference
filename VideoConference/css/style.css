@@ -517,35 +517,31 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 272px;
+  width: 280px;
   height: 60px;
   background: rgba(0, 95, 236, 0.1);
   border-radius: 6px;
 }
 
-.promo .pricing-plan .plan-switcher .btn-annually {
-  margin-left: 5px;
-  width: 135px;
+.promo .pricing-plan .plan-switcher .btn-annually,
+.promo .pricing-plan .plan-switcher .btn-monthly {
+  width: 132px;
   height: 48px;
-  background: #FFFFFF;
-  border-radius: 6px;
-  border: none;
   font-style: normal;
   font-weight: 500;
   font-size: 17px;
   line-height: 17px;
-  color: #005FEC;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
+  color: #18216D;
 }
 
-.promo .pricing-plan .plan-switcher .btn-monthly {
-  width: 135px;
-  height: 48px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 17px;
-  color: #18216D;
-  border: none;
-  cursor: pointer;
+.promo .pricing-plan .plan-switcher .switch-on {
+  background: #FFFFFF;
+  border-radius: 6px;
+  color: #005FEC;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
