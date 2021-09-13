@@ -1,0 +1,48 @@
+@import "color"
+.nav-bar
+  margin: 0 auto
+  margin-top: 25px
+  width: 1400px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  .menu-logo
+    width: 114px
+    flex-grow: 1
+  %menu-text
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    line-height: 20px
+    color: $main-color
+    text-decoration: none
+  .menu-link
+    width: 507px
+    margin-left: 25px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    flex-grow: 3
+    .link
+      padding-right: 58px
+      @extend %menu-text
+  .menu-btn
+    width: 239px
+    padding-left: 172px
+    flex-grow: 2
+    .link
+      padding-right: 40px
+      @extend %menu-text
+    .btn-download
+      width: 136px
+      height: 52px
+      font-family: 'Inter', sans-serif
+      font-style: normal
+      font-weight: 500
+      font-size: 17px
+      line-height: 20px
+      color: #FFFFFF
+      background: $main-color
+      border-radius: 6px
+      cursor: pointer
+      border: none
